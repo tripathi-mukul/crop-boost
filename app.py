@@ -32,8 +32,8 @@ knn1.fit(X_train,y_train)
 
 
 st.write("""
-# CropBoot App
-This app help you predict the **Crop Yield** and recommends **Fertilizer** to be used to achieve the desired yield
+# CropBoost App
+This app help you predict the **Crop Yield** and recommends **Fertilizer** to be used to achieve the desired yield.
 """)
 
 
@@ -92,7 +92,6 @@ displayValue = {
     'Yield' : yieldpred
 }
 st.subheader('Predicted Yield(t/Ha)')
-st.write("Accuracy-80.40%")
 
 st.dataframe(pd.DataFrame(displayValue).style.applymap(
         lambda _: "background-color: LightGreen;", subset=([0], slice(None))
@@ -123,6 +122,7 @@ fertrec = knn1.predict(dffert)
 
 
 st.subheader('Recommended Fertilizer(N-P-K)')
+st.write("You are advised to use the fertilizer with the following Nitrogen, Phosporus and Potassium composition to achieve your desired yield for the crop")
 if fertrec==1:
     st.write("0-0-0")
 elif fertrec==2:
@@ -143,7 +143,6 @@ elif fertrec==9:
     st.write("80-30-40")
 else:
     st.write("92-30-40")
-st.write("Accuracy-78.00%")
 
 
 
