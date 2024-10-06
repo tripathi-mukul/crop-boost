@@ -98,7 +98,7 @@ st.dataframe(pd.DataFrame(displayValue).style.applymap(
         lambda _: "background-color: LightGreen;", subset=([0], slice(None))
     ), hide_index=True)
 
-yieldpred=np.round_(yieldpred)
+yieldpred=np.round(yieldpred)
 fig=plt.figure(figsize=[12.0,0.5])
 axes=fig.add_axes([0,0,1,1])
 axes.set_xlim([50,300])
