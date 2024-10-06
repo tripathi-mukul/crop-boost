@@ -1,4 +1,5 @@
 # Crop_yield_predictor_and_Fertilizer_Recommendation
-To run :- <br>
-1)git clone<br>
-2)streamlit run new.py
+To run the project on your local machine
+- git clone<br>
+- pip install requirements.txt
+- streamlit run new.py
